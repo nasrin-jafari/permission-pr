@@ -1,16 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
-interface InputFieldProps {
-  label?: string;
-  name: string;
-  type?: React.InputHTMLAttributes<HTMLInputElement>['type'];
-  placeholder?: string;
-  register: UseFormRegister<any>;
-  errors?: FieldErrors;
-}
+import { InputFieldProps } from '@/types';
 
 const InputField: React.FC<InputFieldProps> = ({
   label,

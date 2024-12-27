@@ -1,9 +1,4 @@
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onNextPage: () => void;
-  onPrevPage: () => void;
-}
+import { PaginationProps } from '@/types';
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,

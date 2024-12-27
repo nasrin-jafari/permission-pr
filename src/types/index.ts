@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
 
 export interface MainLayoutProps {
   children: ReactNode;
@@ -16,4 +17,18 @@ export interface FetchPostsResponse {
 export interface LoginFormInputs {
   username: string;
   password: string;
+}
+export interface InputFieldProps {
+  label?: string;
+  name: string;
+  type?: React.InputHTMLAttributes<HTMLInputElement>['type'];
+  placeholder?: string;
+  register: UseFormRegister<any>;
+  errors?: FieldErrors;
+}
+export interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onNextPage: () => void;
+  onPrevPage: () => void;
 }

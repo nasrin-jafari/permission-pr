@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LoginDetails: React.FC = () => {
   return (
     <div className="mt-8 flex gap-4 rounded-lg border border-dashed border-gray-500">
