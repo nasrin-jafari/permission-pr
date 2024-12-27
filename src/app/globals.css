@@ -4,7 +4,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
+}
+
+.dark {
+  --background: #121212;
+  --foreground: #e4e4e7;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +29,27 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #e57b2d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e57b2d;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body::-webkit-scrollbar {
+  width: 0em;
 }
