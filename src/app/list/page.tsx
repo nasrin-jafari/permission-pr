@@ -36,7 +36,7 @@ const ListOfPosts = () => {
       <h1 className="mb-6 text-center text-3xl font-bold">لیست پست‌ها</h1>
       <div className="space-y-4">
         {posts.map((post: Post) => (
-          <div key={post.id} className="bg-dark-bg rounded-lg p-4 shadow-sm">
+          <div key={post.id} className="rounded-lg bg-dark-bg p-4 shadow-sm">
             <h3 className="text-xl font-semibold">{post.title}</h3>
             <p className="text-gray-300">{post.body}</p>
           </div>
