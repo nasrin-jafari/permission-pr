@@ -13,3 +13,7 @@ export interface FetchPostsResponse {
   data: Post[];
   totalCount: number;
 }
+export interface LoginFormInputs {
+  username: string;
+  password: string;
+}
