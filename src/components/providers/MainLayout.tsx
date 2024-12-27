@@ -4,10 +4,18 @@ import Navbar from '@/components/sections/Navbar';
 import AuthGuard from '@/components/providers/AuthGuard';
 import ToastProvider from '@/components/providers/ToastProvider';
 import { MainLayoutProps } from '@/types';
-
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 3,
+      retryDelay: 3000,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: true,
+      staleTime: 5 * 60 * 1000,
+    },
+  },
+});
 export default function MainLayout({ children }: MainLayoutProps) {
-  const queryClient = new QueryClient();
-
   return (
     <div
       className={`flex min-h-screen flex-col items-center justify-start bg-dark-bg pb-10`}
