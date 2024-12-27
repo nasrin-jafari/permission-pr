@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Vazirmatn } from 'next/font/google';
+import MainLayout from '@/components/providers/MainLayout';
 
 const vazirmatn = Vazirmatn({
   subsets: ['latin', 'arabic'],
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={`${vazirmatn.className} bg-dark-bg`}>{children}</body>
+      <body className={`${vazirmatn.className} bg-dark-bg`}>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 }
